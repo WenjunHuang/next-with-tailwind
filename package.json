@@ -5,11 +5,23 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "watch": "postcss styles/index.css -o build/tailwind.css --watch"
   },
   "dependencies": {
+    "@types/classnames": "^2.2.10",
+    "classnames": "^2.2.6",
     "next": "9.3.5",
     "react": "16.13.1",
     "react-dom": "16.13.1"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.1.2",
+    "@types/node": "^13.13.2",
+    "@types/react": "^16.9.34",
+    "postcss-cli": "^7.1.0",
+    "postcss-preset-env": "^6.7.0",
+    "tailwindcss": "^1.3.4",
+    "typescript": "^3.8.3"
   }
 }
