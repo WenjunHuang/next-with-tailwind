@@ -2,7 +2,7 @@ import React, {ComponentProps, useState} from 'react'
 import classNames from "classnames"
 
 const SearchFilter: React.FC<ComponentProps<any>> = (props: ComponentProps<any>) => {
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState(true)
     return (
         <section className="bg-gray-800">
             <div className="flex justify-between px-4 py-3">
@@ -31,8 +31,8 @@ const SearchFilter: React.FC<ComponentProps<any>> = (props: ComponentProps<any>)
                 </button>
             </div>
             {isOpen ? <form>
-                <fieldset className="px-4 py-4 border-t border-gray-900">
-                    <div className="flex -mx-2">
+                <div className="px-4 py-4 border-t border-gray-900 sm:flex sm:-mx-2">
+                    <div className="flex -mx-2 sm:w-1/2 sm:mx-0">
                         <label className="block w-1/2 px-2">
                             <span className="text-sm font-semibold text-gray-500">Bedrooms</span>
                             <select className="text-white mt-1 form-select block w-full">
@@ -46,7 +46,7 @@ const SearchFilter: React.FC<ComponentProps<any>> = (props: ComponentProps<any>)
                             </select>
                         </label>
                     </div>
-                    <div className="mt-4">
+                    <div className="mt-4 sm:w-1/2 sm:mt-0 sm:px-2">
                         <label>
                             <span className="text-sm font-semibold text-gray-500">Price Range</span>
                             <select className="text-white mt-1 form-select block w-full">
@@ -54,8 +54,8 @@ const SearchFilter: React.FC<ComponentProps<any>> = (props: ComponentProps<any>)
                             </select>
                         </label>
                     </div>
-                </fieldset>
-                <fieldset className="px-4 py-4 border-t border-gray-900">
+                </div>
+                <div className="px-4 py-4 border-t border-gray-900">
                     <span className="block text-sm font-semibold text-gray-500">Property Type</span>
                     <label className="mt-3 flex items-center">
                         <input className="bg-gray-900 form-radio" type="radio" name="propertyType" value="house"/>
@@ -73,8 +73,8 @@ const SearchFilter: React.FC<ComponentProps<any>> = (props: ComponentProps<any>)
                         <input className="bg-gray-900 form-radio" type="radio" name="propertyType" value="townhouse"/>
                         <span className="ml-2 text-white">Townhouse</span>
                     </label>
-                </fieldset>
-                <fieldset className="px-4 py-4 border-t border-gray-900">
+                </div>
+                <div className="px-4 py-4 border-t border-gray-900">
                     <span className="block text-sm font-semibold text-gray-500">Amenities</span>
                     <label className="mt-3 flex items-center">
                         <input className="bg-gray-900 form-checkbox" type="checkbox" name="balcony"/>
@@ -104,7 +104,7 @@ const SearchFilter: React.FC<ComponentProps<any>> = (props: ComponentProps<any>)
                         <input className="bg-gray-900 form-checkbox" type="checkbox" name="parking"/>
                         <span className="ml-2 text-white">Parking</span>
                     </label>
-                </fieldset>
+                </div>
                 <div className="bg-gray-900 px-4 py-4">
                     <button
                         className="blog w-full bg-indigo-500 hover:bg-indigo-400 font-semibold text-white px-4 py-2 rounded-lg">Update
