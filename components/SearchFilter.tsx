@@ -6,7 +6,7 @@ const SearchFilter: React.FC<ComponentProps<any>> = (props: ComponentProps<any>)
     return (
         <section className="bg-gray-800">
             <div className="flex justify-between px-4 py-3">
-                <div className="relative">
+                <div className="relative w-full max-w-sm">
                     <div className="absolute flex items-center inset-y-0 left-0 pl-3">
                         <svg className="w-6 h-6 fill-current text-gray-600" xmlns="http://www.w3.org/2000/svg"
                              viewBox="0 0 512 512">
@@ -15,13 +15,15 @@ const SearchFilter: React.FC<ComponentProps<any>> = (props: ComponentProps<any>)
                         </svg>
                     </div>
                     <input
-                        className="bg-gray-900  focus:outline-none focus:bg-white focus:text-gray-900 text-white rounded-lg pl-10 pr-2 py-2"
+                        className="block w-full bg-gray-900  focus:outline-none focus:bg-white focus:text-gray-900 text-white rounded-lg pl-10 pr-2 py-2"
                         placeholder="Search by keywords"/>
                 </div>
                 <button
                     onClick={() => setIsOpen(!isOpen)}
-                    className={classNames("inline-flex bg-gray-700 focus:outline-none focus:shadow-outline rounded-lg  pl-3 pr-4", {"bg-gray-900": isOpen,
-                    "hover:bg-gray-600 shadow":!isOpen})}>
+                    className={classNames("ml-4 inline-flex bg-gray-700 focus:outline-none focus:shadow-outline rounded-lg  pl-3 pr-4", {
+                        "bg-gray-900": isOpen,
+                        "hover:bg-gray-600 shadow": !isOpen
+                    })}>
                     <svg className="w-6 h-6 fill-current text-gray-500" xmlns="http://www.w3.org/2000/svg"
                          viewBox="0 0 576 512">
                         <path
@@ -57,57 +59,64 @@ const SearchFilter: React.FC<ComponentProps<any>> = (props: ComponentProps<any>)
                 </div>
                 <div className="px-4 py-4 border-t border-gray-900">
                     <span className="block text-sm font-semibold text-gray-500">Property Type</span>
-                    <label className="mt-3 flex items-center">
-                        <input className="bg-gray-900 form-radio" type="radio" name="propertyType" value="house"/>
-                        <span className="ml-2 text-white">House</span>
-                    </label>
-                    <label className="mt-3 flex items-center">
-                        <input className="bg-gray-900 form-radio" type="radio" name="propertyType" value="apartment"/>
-                        <span className="ml-2 text-white">Apartment</span>
-                    </label>
-                    <label className="mt-3 flex items-center">
-                        <input className="bg-gray-900 form-radio" type="radio" name="propertyType" value="loft"/>
-                        <span className="ml-2 text-white">Loft</span>
-                    </label>
-                    <label className="mt-3 flex items-center">
-                        <input className="bg-gray-900 form-radio" type="radio" name="propertyType" value="townhouse"/>
-                        <span className="ml-2 text-white">Townhouse</span>
-                    </label>
+                    <div className="sm:flex sm:-mx-2">
+                        <label className="mt-3 sm:w-1/4 sm:px-2 flex items-center">
+                            <input className="bg-gray-900 form-radio" type="radio" name="propertyType" value="house"/>
+                            <span className="ml-2 text-white">House</span>
+                        </label>
+                        <label className="mt-3 sm:w-1/4 sm:px-2 flex items-center">
+                            <input className="bg-gray-900 form-radio" type="radio" name="propertyType"
+                                   value="apartment"/>
+                            <span className="ml-2 text-white">Apartment</span>
+                        </label>
+                        <label className="mt-3 sm:w-1/4 sm:px-2 flex items-center">
+                            <input className="bg-gray-900 form-radio" type="radio" name="propertyType" value="loft"/>
+                            <span className="ml-2 text-white">Loft</span>
+                        </label>
+                        <label className="mt-3 sm:w-1/4 sm:px-2 flex items-center">
+                            <input className="bg-gray-900 form-radio" type="radio" name="propertyType"
+                                   value="townhouse"/>
+                            <span className="ml-2 text-white">Townhouse</span>
+                        </label>
+                    </div>
+
                 </div>
                 <div className="px-4 py-4 border-t border-gray-900">
                     <span className="block text-sm font-semibold text-gray-500">Amenities</span>
-                    <label className="mt-3 flex items-center">
-                        <input className="bg-gray-900 form-checkbox" type="checkbox" name="balcony"/>
-                        <span className="ml-2 text-white">Balcony</span>
-                    </label>
-                    <label className="mt-3 flex items-center">
-                        <input className="bg-gray-900 form-checkbox" type="checkbox" name="airConditioning"/>
-                        <span className="ml-2 text-white">Air conditioning</span>
-                    </label>
-                    <label className="mt-3 flex items-center">
-                        <input className="bg-gray-900 form-checkbox" type="checkbox" name="pool"/>
-                        <span className="ml-2 text-white">Pool</span>
-                    </label>
-                    <label className="mt-3 flex items-center">
-                        <input className="bg-gray-900 form-checkbox" type="checkbox" name="beach"/>
-                        <span className="ml-2 text-white">Beach</span>
-                    </label>
-                    <label className="mt-3 flex items-center">
-                        <input className="bg-gray-900 form-checkbox" type="checkbox" name="petFriendly"/>
-                        <span className="ml-2 text-white">Pet friendly</span>
-                    </label>
-                    <label className="mt-3 flex items-center">
-                        <input className="bg-gray-900 form-checkbox" type="checkbox" name="kidFriendly"/>
-                        <span className="ml-2 text-white">Kid friendly</span>
-                    </label>
-                    <label className="mt-3 flex items-center">
-                        <input className="bg-gray-900 form-checkbox" type="checkbox" name="parking"/>
-                        <span className="ml-2 text-white">Parking</span>
-                    </label>
+                    <div className="sm:flex sm:flex-wrap sm:-mx-2">
+                        <label className="mt-3 sm:w-1/4 sm:px-2 flex items-center">
+                            <input className="bg-gray-900 form-checkbox" type="checkbox" name="balcony"/>
+                            <span className="ml-2 text-white">Balcony</span>
+                        </label>
+                        <label className="mt-3 sm:w-1/4 sm:px-2 flex items-center">
+                            <input className="bg-gray-900 form-checkbox" type="checkbox" name="pool"/>
+                            <span className="ml-2 text-white">Pool</span>
+                        </label>
+                        <label className="mt-3 sm:w-1/4 sm:px-2 flex items-center">
+                            <input className="bg-gray-900 form-checkbox" type="checkbox" name="beach"/>
+                            <span className="ml-2 text-white">Beach</span>
+                        </label>
+                        <label className="mt-3 sm:w-1/4 sm:px-2 flex items-center">
+                            <input className="bg-gray-900 form-checkbox" type="checkbox" name="petFriendly"/>
+                            <span className="ml-2 text-white">Pet friendly</span>
+                        </label>
+                        <label className="mt-3 sm:w-1/4 sm:px-2 flex items-center">
+                            <input className="bg-gray-900 form-checkbox" type="checkbox" name="kidFriendly"/>
+                            <span className="ml-2 text-white">Kid friendly</span>
+                        </label>
+                        <label className="mt-3 sm:w-1/4 sm:px-2 flex items-center">
+                            <input className="bg-gray-900 form-checkbox" type="checkbox" name="parking"/>
+                            <span className="ml-2 text-white">Parking</span>
+                        </label>
+                        <label className="mt-3 sm:w-1/2 sm:px-2 flex items-center">
+                            <input className="bg-gray-900 form-checkbox" type="checkbox" name="airConditioning"/>
+                            <span className="ml-2 text-white">Air conditioning</span>
+                        </label>
+                    </div>
                 </div>
                 <div className="bg-gray-900 px-4 py-4">
                     <button
-                        className="blog w-full bg-indigo-500 hover:bg-indigo-400 font-semibold text-white px-4 py-2 rounded-lg">Update
+                        className="block w-full sm:w-auto sm:inline-block bg-indigo-500 hover:bg-indigo-400 font-semibold text-white px-4 py-2 rounded-lg">Update
                         Result
                     </button>
                 </div>

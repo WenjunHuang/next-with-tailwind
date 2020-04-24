@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
+.aspect-6x5 {
+    @apply relative pb-5/6;
+}
+.aspect-6x5 > * {
+    @apply absolute inset-0 h-full w-full;
+}
 @tailwind utilities;
