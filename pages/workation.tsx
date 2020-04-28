@@ -1,4 +1,5 @@
 import React, {ComponentProps} from 'react'
+import classNames from "classnames"
 import SideHeader from "../components/SideHeader"
 import SearchFilter from "../components/SearchFilter"
 
@@ -10,10 +11,10 @@ const Workation: React.FC<ComponentProps<any>> = (props) => {
         <main className="px-4 py-6">
             <h3 className="text-gray-900 text-xl">Los Angeles</h3>
             <p className="text-gray-600">Live like the starts in these luxurious Southern California estates.</p>
-            <div className="mt-6 sm:flex sm:-mx-2">
+            <div className="mt-6 sm:flex sm:-mx-2 sm:overflow-x-auto sm:pb-8">
                 {
-                    pics.map((pic)=>(
-                    <div className="sm:max-w-xs sm:px-2">
+                    pics.map((pic,index)=>(
+                    <div className={classNames("sm:w-80 sm:flex-shrink-0  sm:px-2 sm:mt-0",{"mt-10": index > 0})}>
                         <div className="relative pb-5/6">
                             <img
                                 className="absolute inset-0 h-full w-full block  rounded-lg shadow-md object-cover object-center"
