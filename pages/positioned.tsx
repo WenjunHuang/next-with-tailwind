@@ -45,7 +45,6 @@ const NavigationContent = styled(Base)`
   left: 10px;
   top:10px;
 `
-
 const BackgroundImage = styled(Base)``
 
 const Features = styled(Base)``
