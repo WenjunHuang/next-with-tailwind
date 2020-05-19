@@ -4,8 +4,8 @@ import classNames from "classnames"
 const SearchFilter: React.FC<ComponentProps<any>> = (props: ComponentProps<any>) => {
     const [isOpen, setIsOpen] = useState(true)
     return (
-        <section className="bg-gray-800">
-            <div className="flex justify-between px-4 py-3">
+        <section className="bg-gray-800 xl:w-72">
+            <div className="flex justify-between px-4 py-3 xl:hidden">
                 <div className="relative w-full max-w-sm">
                     <div className="absolute flex items-center inset-y-0 left-0 pl-3">
                         <svg className="w-6 h-6 fill-current text-gray-600" xmlns="http://www.w3.org/2000/svg"
@@ -32,23 +32,23 @@ const SearchFilter: React.FC<ComponentProps<any>> = (props: ComponentProps<any>)
                     <span className="ml-1 text-white font-medium">filters</span>
                 </button>
             </div>
-            {isOpen ? <form>
-                <div  className="lg:flex">
-                    <div className="px-4 py-4 border-t border-gray-900">
+            {isOpen ? <form className="xl:h-full xl:flex xl:flex-col xl:justify-between">
+                <div  className="lg:flex xl:block xl:overflow-y-auto">
+                    <div className="px-4 py-4 border-t border-gray-900 lg:w-1/3 xl:border-t-0 xl:w-full">
                         <div className="flex flex-wrap -mx-2">
-                            <label className="block w-1/2 px-2 sm:w-1/4">
+                            <label className="block w-1/2 px-2 sm:w-1/4 lg:w-1/2">
                                 <span className="text-sm font-semibold text-gray-500">Bedrooms</span>
                                 <select className="text-white mt-1 form-select block w-full">
                                     <option>4</option>
                                 </select>
                             </label>
-                            <label className="block w-1/2 px-2 sm:w-1/4">
+                            <label className="block w-1/2 px-2 sm:w-1/4 lg:w-1/2">
                                 <span className="text-sm font-semibold text-gray-500">Bathrooms</span>
                                 <select className="text-white mt-1 form-select block w-full">
                                     <option>2</option>
                                 </select>
                             </label>
-                            <label className="block w-full mt-4  px-2 sm:mt-0 sm:w-1/2">
+                            <label className="block w-full mt-4  px-2 sm:mt-0 sm:w-1/2 lg:mt-4 lg:w-full">
                                 <span className="text-sm font-semibold text-gray-500">Price Range</span>
                                 <select className="text-white mt-1 form-select block w-full">
                                     <option>Up to $2,000/wk</option>
@@ -56,25 +56,25 @@ const SearchFilter: React.FC<ComponentProps<any>> = (props: ComponentProps<any>)
                             </label>
                         </div>
                     </div>
-                    <div className="px-4 py-4 border-t border-gray-900">
+                    <div className="px-4 py-4 border-t border-gray-900 lg:w-1/3 lg:border-l xl:w-full">
                         <span className="block text-sm font-semibold text-gray-500">Property Type</span>
-                        <div className="sm:flex sm:-mx-2">
-                            <label className="mt-3 sm:w-1/4 sm:px-2 flex items-center">
+                        <div className="sm:flex sm:-mx-2 lg:block lg:mx-0">
+                            <label className="mt-3 sm:w-1/4 sm:px-2 flex items-center lg:w-full lg:px-0">
                                 <input className="bg-gray-900 form-radio" type="radio" name="propertyType"
                                        value="house"/>
                                 <span className="ml-2 text-white">House</span>
                             </label>
-                            <label className="mt-3 sm:w-1/4 sm:px-2 flex items-center">
+                            <label className="mt-3 sm:w-1/4 sm:px-2 flex items-center lg:w-full lg:px-0">
                                 <input className="bg-gray-900 form-radio" type="radio" name="propertyType"
                                        value="apartment"/>
                                 <span className="ml-2 text-white">Apartment</span>
                             </label>
-                            <label className="mt-3 sm:w-1/4 sm:px-2 flex items-center">
+                            <label className="mt-3 sm:w-1/4 sm:px-2 flex items-center lg:w-full lg:px-0">
                                 <input className="bg-gray-900 form-radio" type="radio" name="propertyType"
                                        value="loft"/>
                                 <span className="ml-2 text-white">Loft</span>
                             </label>
-                            <label className="mt-3 sm:w-1/4 sm:px-2 flex items-center">
+                            <label className="mt-3 sm:w-1/4 sm:px-2 flex items-center lg:w-full lg:px-0">
                                 <input className="bg-gray-900 form-radio" type="radio" name="propertyType"
                                        value="townhouse"/>
                                 <span className="ml-2 text-white">Townhouse</span>
@@ -82,34 +82,34 @@ const SearchFilter: React.FC<ComponentProps<any>> = (props: ComponentProps<any>)
                         </div>
 
                     </div>
-                    <div className="px-4 py-4 border-t border-gray-900">
+                    <div className="px-4 py-4 border-t border-gray-900 lg:w-1/3 lg:border-l xl:w-full">
                         <span className="block text-sm font-semibold text-gray-500">Amenities</span>
                         <div className="sm:flex sm:flex-wrap sm:-mx-2">
-                            <label className="mt-3 sm:w-1/4 sm:px-2 flex items-center">
+                            <label className="mt-3 sm:w-1/4 sm:px-2 flex items-center lg:w-1/2 xl:w-full">
                                 <input className="bg-gray-900 form-checkbox" type="checkbox" name="balcony"/>
                                 <span className="ml-2 text-white">Balcony</span>
                             </label>
-                            <label className="mt-3 sm:w-1/4 sm:px-2 flex items-center">
+                            <label className="mt-3 sm:w-1/4 sm:px-2 flex items-center lg:w-1/2 xl:w-full">
                                 <input className="bg-gray-900 form-checkbox" type="checkbox" name="pool"/>
                                 <span className="ml-2 text-white">Pool</span>
                             </label>
-                            <label className="mt-3 sm:w-1/4 sm:px-2 flex items-center">
+                            <label className="mt-3 sm:w-1/4 sm:px-2 flex items-center lg:w-1/2 xl:w-full">
                                 <input className="bg-gray-900 form-checkbox" type="checkbox" name="beach"/>
                                 <span className="ml-2 text-white">Beach</span>
                             </label>
-                            <label className="mt-3 sm:w-1/4 sm:px-2 flex items-center">
+                            <label className="mt-3 sm:w-1/4 sm:px-2 flex items-center lg:w-1/2 xl:w-full">
                                 <input className="bg-gray-900 form-checkbox" type="checkbox" name="petFriendly"/>
                                 <span className="ml-2 text-white">Pet friendly</span>
                             </label>
-                            <label className="mt-3 sm:w-1/4 sm:px-2 flex items-center">
+                            <label className="mt-3 sm:w-1/4 sm:px-2 flex items-center lg:w-1/2 xl:w-full">
                                 <input className="bg-gray-900 form-checkbox" type="checkbox" name="kidFriendly"/>
                                 <span className="ml-2 text-white">Kid friendly</span>
                             </label>
-                            <label className="mt-3 sm:w-1/4 sm:px-2 flex items-center">
+                            <label className="mt-3 sm:w-1/4 sm:px-2 flex items-center lg:w-1/2 xl:w-full">
                                 <input className="bg-gray-900 form-checkbox" type="checkbox" name="parking"/>
                                 <span className="ml-2 text-white">Parking</span>
                             </label>
-                            <label className="mt-3 sm:w-1/2 sm:px-2 flex items-center">
+                            <label className="mt-3 sm:w-1/2 sm:px-2 flex items-center lg:w-full">
                                 <input className="bg-gray-900 form-checkbox" type="checkbox" name="airConditioning"/>
                                 <span className="ml-2 text-white">Air conditioning</span>
                             </label>
@@ -118,7 +118,7 @@ const SearchFilter: React.FC<ComponentProps<any>> = (props: ComponentProps<any>)
                 </div>
                 <div className="bg-gray-900 px-4 py-4">
                     <button
-                        className="block w-full sm:w-auto sm:inline-block bg-indigo-500 hover:bg-indigo-400 font-semibold text-white px-4 py-2 rounded-lg">Update
+                        className="block w-full sm:w-auto sm:inline-block bg-indigo-500 hover:bg-indigo-400 font-semibold text-white px-4 py-2 rounded-lg xl:w-full">Update
                         Result
                     </button>
                 </div>

@@ -5,7 +5,8 @@ module.exports = {
                 "5/6":"83.33333%"
             },
             spacing:{
-                "80":'20rem'
+                "72":'18rem',
+                "80":'20rem',
             }
         },
         customForms: theme => ({
