@@ -54,7 +54,7 @@ module.exports = {
             'blue-light':'#9ddbff',
             indigo: {
                 dark:'#405dcf',
-                light:'#7b95fc',
+                light:'#6f8bfb',
                 default:'#5978f3',
             },
         },

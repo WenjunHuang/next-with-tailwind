@@ -2,7 +2,7 @@ import React, {ComponentProps, FC} from 'react'
 
 const RefactorUI: FC<ComponentProps<any>> = (props) => {
     return (
-        <div className="header">
+        <div className="header antialiased">
             <div className="container px-6 py-24 mx-auto">
                 <div>
                     <svg className="block w-48 sm:w-56" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 212 60">
@@ -21,14 +21,14 @@ const RefactorUI: FC<ComponentProps<any>> = (props) => {
                     </svg>
                 </div>
                 <h1 className="font-serif font-semibold text-white text-5xl mt-6">Tired of relying on Bootstrap?</h1>
-                <p className="text-2xl  text-blue-light">
-                    Learn how to create designs that are as beautiful as your code, through <strong
+                <p className="text-2xl  text-blue-light mt-4 leading-normal">
+                    Learn how to create designs that are as beautiful as your code<br/> through <strong
                     className="text-white font-bold">specific
                     tactics</strong> and <strong className="text-white font-bold">actionable advice</strong>.
                 </p>
-                <form>
-                    <input type="text"/>
-                    <button></button>
+                <form className="flex overflow-hidden">
+                    <input className="bg-white rounded-l px-6 py-3" type="text" placeholder="Enter your email"/>
+                    <button className="bg-indigo hover:bg-indigo-light rounded-r uppercase text-white font-bold tracking-wide px-6 py-3">Subscribe</button>
                 </form>
             </div>
             <style jsx>{`
