@@ -44,6 +44,23 @@ module.exports = {
                 }
             }
         }),
+        colors: {
+            'transparent':'transparent',
+            'black': '#c1e29',
+            'grey-dark':'#4e616c',
+            'grey-light':'#dfe4e7',
+            'grey-lighter':'#f3f7f9',
+            'white':'#ffffff',
+            'blue-light':'#9ddbff',
+            indigo: {
+                dark:'#405dcf',
+                light:'#7b95fc',
+                default:'#5978f3',
+            },
+        },
+        screens: {
+            'ref':'960px',
+        }
     },
     variants: {},
     plugins: [
