@@ -7,3 +7,5 @@
     @apply absolute inset-0 h-full w-full;
 }
 @tailwind utilities;
+
+@import '~antd/dist/antd.css';
